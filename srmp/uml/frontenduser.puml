@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor Patient as P
+
+rectangle "Front-End" {
+  (Recherche de Médecins)
+  (Voir Profil Médecin)
+  (Voir Recommandations)
+  (Prendre Rendez-vous)
+  (Gérer Profil)
+}
+
+P --> (Recherche de Médecins)
+P --> (Voir Profil Médecin)
+P --> (Voir Recommandations)
+P --> (Prendre Rendez-vous)
+P --> (Gérer Profil)
+
+@enduml

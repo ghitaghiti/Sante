@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+
+actor Patient as P
+actor Medecin as M
+
+rectangle Système {
+  (Système de Recommandation)
+  (Analyser Profils)
+  (Identifier Similitudes)
+  (Générer Recommandations)
+}
+
+P --> (Système de Recommandation)
+M --> (Système de Recommandation)
+
+(Système de Recommandation) --> (Analyser Profils)
+(Analyser Profils) --> (Identifier Similitudes)
+(Identifier Similitudes) --> (Générer Recommandations)
+
+@enduml

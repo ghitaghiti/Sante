@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+
+actor Patient as P
+
+rectangle Système {
+  (Recherche de Médecins)
+  (Saisir Critères)
+  (Afficher Résultats)
+}
+
+P --> (Recherche de Médecins)
+
+(Recherche de Médecins) --> (Saisir Critères)
+(Saisir Critères) --> (Afficher Résultats)
+
+@enduml

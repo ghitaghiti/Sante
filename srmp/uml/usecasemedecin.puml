@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Medecin as M
+
+rectangle Système {
+  (Inscription)
+  (Saisir Informations)
+  (Valider Informations)
+  (Créer Profil Médecin)
+}
+
+M --> (Inscription)
+
+(Inscription) --> (Saisir Informations)
+(Saisir Informations) --> (Valider Informations)
+(Valider Informations) --> (Créer Profil Médecin)
+
+@enduml

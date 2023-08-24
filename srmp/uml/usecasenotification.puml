@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+
+actor Patient as P
+actor Medecin as M
+
+rectangle Système {
+  (Notifications et Rendez-vous)
+  (Envoyer Notifications)
+  (Planifier Rendez-vous)
+  (Gérer Rendez-vous)
+}
+
+P --> (Notifications et Rendez-vous)
+M --> (Notifications et Rendez-vous)
+
+(Notifications et Rendez-vous) --> (Envoyer Notifications)
+(Notifications et Rendez-vous) --> (Planifier Rendez-vous)
+(Planifier Rendez-vous) --> (Gérer Rendez-vous)
+
+@enduml

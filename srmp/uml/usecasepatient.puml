@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor Patient as P
+
+rectangle Système {
+  (Inscription)
+  (Saisir Informations)
+  (Valider Informations)
+  (Créer Profil Patient)
+}
+
+P --> (Inscription)
+
+(Inscription) --> (Saisir Informations)
+(Saisir Informations) --> (Valider Informations)
+(Valider Informations) --> (Créer Profil Patient)
+
+@enduml

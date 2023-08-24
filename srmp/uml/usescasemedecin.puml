@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor Patient as P
+actor Medecin as M
+
+P --> (Inscription)
+P --> (Recherche de Médecins)
+P --> (Recevoir Recommandations)
+P --> (Prendre Rendez-vous)
+
+M --> (Inscription)
+M --> (Recevoir Commentaires et Évaluations)
+M --> (Mettre à jour Disponibilités)
+M --> (Consulter Profil Patient)
+M --> (Gérer Rendez-vous)
+
+@enduml

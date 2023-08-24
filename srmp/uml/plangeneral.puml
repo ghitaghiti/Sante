@@ -1,0 +1,47 @@
+@startuml
+!theme spacelab
+package "API Gateway" {
+  [Gestion des requêtes]
+  [Authentification]
+  [Routage vers les services]
+}
+
+package "Service d'Utilisateur" {
+  [Gestion des profils utilisateurs]
+  [Inscription et authentification]
+  [Profil patient et médecin]
+}
+
+package "Service de Recommandation" {
+  [Analyse des profils]
+  [Identification des similitudes]
+  [Génération de recommandations]
+}
+
+package "Service de Gestion de Rendez-vous" {
+  [Planification des rendez-vous]
+  [Notification des rendez-vous]
+  [Suivi des rendez-vous]
+}
+
+package "Service de Commentaires" {
+  [Gestion des commentaires]
+  [Collecte des évaluations]
+  [Analyse des retours d'information]
+}
+
+[Gestion des requêtes] -down-> [Authentification]
+[Gestion des requêtes] -down-> [Routage vers les services]
+
+[Inscription et authentification] -down-> [Profil patient et médecin]
+
+[Analyse des profils] -down-> [Identification des similitudes]
+[Identification des similitudes] -down-> [Génération de recommandations]
+
+[Planification des rendez-vous] -down-> [Notification des rendez-vous]
+[Planification des rendez-vous] -down-> [Suivi des rendez-vous]
+
+[Gestion des commentaires] -down-> [Collecte des évaluations]
+[Collecte des évaluations] -down-> [Analyse des retours d'information]
+
+@enduml
