@@ -209,7 +209,7 @@ h6 {
 }
 
 .appointment-btn:hover {
-  background: #85d3a7;
+  background: #166ab5;
   color: #fff;
 }
 
@@ -700,7 +700,6 @@ section {
   padding: 40px 30px;
   width: 100%;
 }
-
 .why-us .icon-boxes .icon-box i {
   font-size: 40px;
   color: #1977cc;
@@ -716,7 +715,8 @@ section {
 .why-us .icon-boxes .icon-box p {
   font-size: 15px;
   color: #848484;
-}
+} 
+
 
 /*--------------------------------------------------------------
 # About

@@ -6,4 +6,8 @@ def home(request):
 
 def innerpage(request):
     return render(request,"pages\inner-page.html")
+def service(request):
+    return render(request,"pages\services.html")
+def propos(request):
+    return render(request,"pages/about.html")
     

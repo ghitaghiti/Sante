@@ -5,12 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>S.R.M.P</title>
-   
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+    
+<!-- Template Main CSS File -->
+<link href="{% static 'css/style.css'%}" rel="stylesheet">
+
   </head>
   <body>
     {% include 'parts/topbar.html' %}
     {% include 'parts/navbar.html' %}
-    {% comment %} {% include 'parts/footer.html' %} {% endcomment %}
+    {% block content %}
+    {% endblock content %}
+    {% include 'parts/footer.html' %}
     
 
   </body>
