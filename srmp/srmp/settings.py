@@ -20,7 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "lkhra.apps.LkhraConfig",
+    
     "patient.apps.PatientConfig",
     "medecins.apps.MedecinsConfig",
     "radical.apps.RadicalConfig",
