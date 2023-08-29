@@ -6,6 +6,7 @@ urlpatterns = [
     path("inner/", views.innerpage),
     path("service/", views.service,name="services"),
     path("about/", views.propos,name="propos"),
+    path("contact/", views.propos,name="contact"),
 
 
 ]

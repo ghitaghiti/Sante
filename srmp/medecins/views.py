@@ -5,6 +5,6 @@ def docteurs(request):
     
     return render(request, 'medecins/docteurs.html')
 
-#  def apoint(request):
+def apoint(request):
      
-#      return render(request, 'medecins/apoint.html')
+    return render(request, 'medecins/apoint.html')

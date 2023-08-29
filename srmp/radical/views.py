@@ -10,4 +10,6 @@ def service(request):
     return render(request,"pages\services.html")
 def propos(request):
     return render(request,"pages/about.html")
+def contact(request):
+    return render(request,"pages/contact.html")
     
