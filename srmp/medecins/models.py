@@ -7,7 +7,6 @@ class Docteurs(models.Model):
         ('F', 'Femme'),
     )
 
-    #id = models.AutoField(primary_key=True)
     fullname= models.CharField(max_length=30)
     age=models.IntegerField()
     sexe = models.CharField(max_length=1, choices=sexe_choix)

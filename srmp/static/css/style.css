@@ -226,7 +226,19 @@ h6 {
 /**
 * Desktop Navigation 
 */
+
+/* .sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Ajustez la valeur en fonction de vos besoins */
+}
 .navbar {
+  
   padding: 0;
 }
 

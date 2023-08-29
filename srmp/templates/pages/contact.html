@@ -1,4 +1,6 @@
- {% extends 'base.html' %} 
+ 
+{% extends 'base.html' %}
+ {% comment %} {% extends 'base.html' %} 
 {% load static %}
  {% block content %}
       <!-- ======= Contact Section ======= -->
@@ -75,10 +77,8 @@
   
         </div>
       </section><!-- End Contact Section -->  
-      
+      {% endblock %} {% endcomment %}
 
-
-{% comment %} {% extends 'base.html' %}
 {% block content %}
 {% load static %}
 
@@ -111,11 +111,11 @@
       <div class="row align-items-stretch no-gutters contact-wrap">
         <div class="col-md-8">
           <div class="form h-100">
-            <h3>Send us a message</h3>
+            <h3>Envoie-nous un message</h3>
             <form class="mb-5" method="post" id="contactForm" name="contactForm">
               <div class="row">
                 <div class="col-md-6 form-group mb-5">
-                  <label for="" class="col-form-label">Name *</label>
+                  <label for="" class="col-form-label">Nom *</label>
                   <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
                 </div>
                 <div class="col-md-6 form-group mb-5">
@@ -126,11 +126,11 @@
 
               <div class="row">
                 <div class="col-md-6 form-group mb-5">
-                  <label for="" class="col-form-label">Phone</label>
+                  <label for="" class="col-form-label">Téléphone</label>
                   <input type="text" class="form-control" name="phone" id="phone"  placeholder="Phone #">
                 </div>
                 <div class="col-md-6 form-group mb-5">
-                  <label for="" class="col-form-label">Company</label>
+                  <label for="" class="col-form-label">Entreprise</label>
                   <input type="text" class="form-control" name="company" id="company"  placeholder="Company  name">
                 </div>
               </div>
@@ -143,7 +143,7 @@
               </div>
               <div class="row">
                 <div class="col-md-12 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                  <input type="submit" value="Envoyer le message" class="btn btn-primary rounded-0 py-2 px-4">
                   <span class="submitting"></span>
                 </div>
               </div>
@@ -151,7 +151,7 @@
 
             <div id="form-message-warning mt-4"></div> 
             <div id="form-message-success">
-              Your message was sent, thank you!
+              Votre message a été envoyé, merci !
             </div>
 
           </div>
@@ -159,7 +159,7 @@
         <div class="col-md-4">
           <div class="contact-info h-100">
             <h3>Contact Information</h3>
-            <p class="mb-5">Thank you for your interest in contacting us! We value your feedback, questions, and suggestions. Please fill out the form to the side to get in touch with our customer support team, and we'll do our best to respond to your inquiry as soon as possible.!</p>
+            {% comment %} <p class="mb-5">Thank you for your interest in contacting us! We value your feedback, questions, and suggestions. Please fill out the form to the side to get in touch with our customer support team, and we'll do our best to respond to your inquiry as soon as possible.!</p> {% endcomment %}
             <ul class="list-unstyled">
               <li class="d-flex">
                 <span class="wrap-icon icon-room mr-3"></span>
@@ -190,4 +190,4 @@
 
   </body>
 </html>
-{% endblock %} {% endcomment %}
+{% endblock %} 
