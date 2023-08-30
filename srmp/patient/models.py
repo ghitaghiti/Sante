@@ -19,6 +19,4 @@ class Patient(models.Model):
     specialitesmedicales=models.TextField()
     Anneesdepratique=models.DateField()
     Certificationsprofessionnelles=models.CharField(max_length=200)
-    
-
-
+ 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Docteurs
+from .models import Docteurs, Sicks
 
 def docteurs(request):
     
@@ -8,3 +8,7 @@ def docteurs(request):
 def apoint(request):
      
     return render(request, 'medecins/apoint.html')
+
+def sick(request):
+    dataobject= Sicks.objects.all()
+    return render(request,"medecins/apoint.html",{'maladie': dataobject})
