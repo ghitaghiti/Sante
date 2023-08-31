@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+class Maladie(models.Model):
+    names=models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.names
+
+class Villes(models.Model):
+    names= models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.names

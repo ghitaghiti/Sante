@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .models import Maladie, Villes
 
-# Register your models here.
-
+admin.site.register(Maladie)
+admin.site.register(Villes)

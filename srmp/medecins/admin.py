@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Docteurs, Sicks
+from .models import Docteurs
 
 admin.site.register(Docteurs)
-admin.site.register(Sicks)

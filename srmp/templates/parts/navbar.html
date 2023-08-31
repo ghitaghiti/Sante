@@ -14,24 +14,24 @@
       <ul>
         <li><a class="nav-link " href="{% url 'home' %}">Accueil</a></li>
         <li><a class="nav-link " href="{% url 'medecin' %}">Médecin</a></li>
-        <li><a class="nav-link " href="{% url 'rendez-vous' %}">Rendez-vous</a></li>
+        {% comment %} <li><a class="nav-link " href="{% url 'rendez-vous' %}">Rendez-vous</a></li> {% endcomment %}
 
         <li class="dropdown"><a href="{% url 'services' %}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>  
         <ul>
           {% comment %} <li><a class="nav-link"  href="{% url 'services' %}">Services</a></li>  {% endcomment %}
 
-          <li class="dropdown"><a href="#"><span>Recommandation</span> <i class="bi bi-chevron-right"></i></a>
+          {% comment %} <li class="dropdown"><a href="#"><span>Recommandation</span> <i class="bi bi-chevron-right"></i></a>
             <ul>
               <li><a href="#">Docteurs</a></li>
               <li><a href="#">Cliniques</a></li>
               <li><a href="#">Pharmacies</a></li>
             </ul>
 
-          </li>
+          </li> {% endcomment %}
           <li><a href="#">Chercher un Docteur</a></li>
-          <li><a href="#">Chercher un Patient</a></li>
+          {% comment %} <li><a href="#">Chercher un Patient</a></li>
           <li><a href="#">Chercher une Cliniques</a></li>
-          <li><a href="#">Chercher une Pharmacies</a></li>
+          <li><a href="#">Chercher une Pharmacies</a></li> {% endcomment %}
         </ul>
         {% comment %} <li><a class="nav-link"  href="{% url 'rendez-vous' %}">Rendez-vous</a></li> {% endcomment %}
          <li><a class="nav-link" href="{% url  'propos' %}">À propos</a></li>

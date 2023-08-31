@@ -15,7 +15,26 @@
 
       <div class="row">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-4">
+          <div class="member d-flex align-items-start">
+            {% comment %} <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div> {% endcomment %}
+            <div class="member-info">
+            {% for item in medecin %}
+              
+              
+              <h4>{{item.Nom_Complete}}</h4>
+              <span>{{item.Specialites_medicales}}</span>
+              {% comment %} <p>{{item.Adresse}}
+                </p> {% endcomment %}
+              <p>{{item.Telephonee }}
+                </p> 
+                <br><br>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        {% comment %} <div class="col-lg-6">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -26,9 +45,9 @@
                 Casablanca Moulay Rachid (Ar)</p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
 
-        <div class="col-lg-6">
+        {% comment %} <div class="col-lg-6">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -38,9 +57,9 @@
               <p>Bd Allal AlFassi , bloc 57 , 1°ét appt. n°3 - 60000 Oujda</p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
 
-        <div class="col-lg-6 mt-4 mt-lg-0">
+        {% comment %} <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-2.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -50,8 +69,8 @@
                 Sidi Bennour Oulad Amrane</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6">
+        </div> {% endcomment %}
+        {% comment %} <div class="col-lg-6">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -61,10 +80,10 @@
               <p>Bd. Zerktouni imm. Zinbi 2°ét. - 0 Oujda</p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
 
         
-        <div class="col-lg-6 mt-4">
+        {% comment %} <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-3.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -75,9 +94,9 @@
                 </p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
 
-        <div class="col-lg-6 mt-4">
+        {% comment %} <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-3.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -88,10 +107,10 @@
                 </p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         
 
-        <div class="col-lg-6 mt-4">
+        {% comment %} <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -102,9 +121,9 @@
                 Casablanca Aîn-CHOCK (AR)</p>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         
-        <div class="col-lg-6 mt-4">
+        {% comment %} <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div>
             <div class="member-info">
@@ -114,7 +133,7 @@
             </div>
           </div>
           
-        </div>
+        </div> {% endcomment %}
       </div>
      
 
