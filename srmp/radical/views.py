@@ -20,3 +20,9 @@ def propos(request):
 
 def contact(request):
     return render(request,"pages/contact.html")
+
+def login(request):
+    return render(request,"pages/login.html")
+
+def signup(request):
+    return render(request,"pages/signup.html")
