@@ -799,7 +799,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../images/about.jpg") center center no-repeat;
+  background: url("../images/entsiimg.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }

@@ -1,39 +1,76 @@
 {% extends 'base.html' %} 
 {% load static %}
 {% block content %}
+
+
 <!-- ======= Doctors Section ======= -->
 <section id="doctors" class="doctors">
     <div class="container">
-      <br>
       <br><br>
 
       <div class="section-title">
         <h2>Médecin</h2>
+
+        <!-- ======= insertion searchbar ======= -->
+         
+        <section class="intro">
+          <link href="{% static 'css/searchbar.css' %}" rel="stylesheet">
+          <script src="{% static 'js/searchbar.js' %}"></script>
+          {% comment %} <div class="bg-image h-100" style="
+                  background-image: url(https://mdbootstrap.com/img/Photos/new-templates/search-box/img2.jpg);
+                "> {% endcomment %}
+            {% comment %} <div class="mask d-flex align-items-center h-100" style="background-color: rgba(61, 162, 195, 0.1);">
+              <div class="container">
+                <div class="card mask-custom p-4">
+                  <div class="card-body"> {% endcomment %}
+                    <p class="h1 font-weight-bold mb-4 text-white">Chercher un Docteur</p>
+                    <div class="row justify-content-center">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <div id="basic" class="form-outline form-white">
+                          <input type="text" id="form1" class="form-control form-control-lg" />
+                          
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3 mb-md-0">
+                        <div id="location" class="form-outline form-white">
+                          <input type="text" id="form2" class="form-control form-control-lg" />
+                        
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <input class="btn btn-info btn-block btn-lg" type="submit" value="Chercher" />
+                      </div>
+                    </div>
+                  {% comment %} </div>
+                </div>
+              </div>
+            </div> {% endcomment %}
+          </div>
+        </section>
+
+          <!-- ======= end insertion searchbar ======= -->
+        <div class="container">
         <p>Les recommandations de médecins peuvent être précieuses lorsqu'il s'agit de choisir un nouveau médecin,
            surtout si vous recherchez une spécialité spécifique ou si vous avez des besoins de santé particuliers.</p>
       </div>
-
+      
       <div class="row">
 
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start">
-            {% comment %} <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div> {% endcomment %}
             <div class="member-info">
             {% for item in medecin %}
-              
-              
-              <h4>{{item.Nom_Complete}}</h4>
-              <span>{{item.Specialites_medicales}}</span>
-              {% comment %} <p>{{item.Adresse}}
-                </p> {% endcomment %}
-              <p>{{item.Telephonee }}
-                </p> 
+              <h4>{{item.fullname}}</h4>
+              <span>{{item.specialitesmedicales}}</span>
+              <p>
+                {{item.telephone }}
+              </p> 
                 <br><br>
             {% endfor %}
             </div>
           </div>
-        </div>
-
+        </div> 
+      </div>
         {% comment %} <div class="col-lg-6">
           <div class="member d-flex align-items-start">
             <div class="pic"><img src="{% static 'images/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
@@ -95,45 +132,7 @@
             </div>
           </div>
         </div> {% endcomment %}
-
-        {% comment %} <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="{% static 'images/doctors/doctors-3.jpg' %}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4> Zineb El Menjra</h4>
-              <span>Dentiste, Esthétique dentaire</span>
-              <p>26 Angle Omar Slaoui Et Rue D'agadir ,3 ème étage Numéro 5 
-                ( En Face Du Marché ), Centre ville / Mers Sultan ,Casablanca
-                </p>
-            </div>
-          </div>
-        </div> {% endcomment %}
         
-
-        {% comment %} <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Nabila AADIL</h4>
-              <span>Médecine générale</span>
-              <p>Travail
-                Lot Naim Oulad Haddou 1Er Étage Imm 3 Sidi Maarouf
-                Casablanca Aîn-CHOCK (AR)</p>
-            </div>
-          </div>
-        </div> {% endcomment %}
-        
-        {% comment %} <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="{% static 'images/doctors/doctors-4.jpg' %}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Zekhnini Khalid</h4>
-              <span>NEUROLOGUE</span>
-              <p>112 Bd Allal Ben Abdellah n° 7 - 60000 Oujda</p>
-            </div>
-          </div>
-          
-        </div> {% endcomment %}
       </div>
      
 

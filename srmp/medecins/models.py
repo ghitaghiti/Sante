@@ -7,16 +7,13 @@ class Docteurs(models.Model):
         ('F', 'Femme'),
     )
 
-    Nom_Complete= models.CharField(max_length=30)
-    Adresse=models.TextField()
-    Sexe = models.CharField(max_length=1, choices=sexe_choix)
-    Telephonee = models.CharField(max_length=20)
-    Image= models.ImageField(upload_to= 'photos/%d/%m/%y')
-    Specialites_medicales=models.TextField()
-    Annees_de_Pratique=models.DateField()
-    Certifications_professionnelles=models.CharField(max_length=200)
+    fullname= models.CharField(max_length=30)
+    sexe = models.CharField(max_length=1, choices=sexe_choix)
+    telephone = models.IntegerField(max_length=30)
+    image= models.ImageField(upload_to= 'photos/%d/%m/%y')
+    specialitesmedicales=models.TextField()
+    Anneesdepratique=models.DateField()
+    
+    def __str__(self):
+        return self.fullname
 
-
-    def __str__(self) -> str:
-        return self.Nom_Complete
-   
