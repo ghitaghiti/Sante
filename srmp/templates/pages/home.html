@@ -5,25 +5,34 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
 
-    
-      
-    
       <h1>Welcome to SRMP</h1>
       <h2>Système de Recommandation de Médecin Personnalisé</h2>
-      <form style="display: flex; margin-top: 35px;">
+      {% comment %} <form method="POST">
+        {% csrf_token %}
+          <label for="symptoms">Enter your symptoms:</label><br>
+          <textarea name="symptoms" rows="4" cols="50"></textarea><br>
+          <input type="submit" value="Get Recommendations">
+        </form> {% endcomment %}
+    
+
+      <form method="POST" style="display: flex; margin-top: 35px;" >
+        {% csrf_token %}
+
         {% comment %} <div class="mb-3"> {% endcomment %}
           <div class="form-floating">
             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+              <label for="symptoms"> </label><br>
               <option selected>Spécialité</option>
               {% for item in maladie %}
               <option value="{{ item.id }}"> {{ item.names }} </option>
             {% endfor %}
             </select>
           </div>
-          {% comment %} <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Sélectionnez Maladie" aria-describedby="emailHelp" style="width: 350px; height: 56px; border-radius: 50px; padding: 10px 35px;"> {% endcomment %}
-        {% comment %} </div> {% endcomment %}
+
+          
         <div class="form-floating">
           <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+            <label for="ville"> </label><br>
             <option selected>la Ville</option>
             {% for item in ville %}
               <option value="{{ item.id }}"> {{ item.names }} </option>
@@ -34,7 +43,7 @@
         </div>
         <div class="form-floating"  style="width: 320px; margin-top: -35px; border-radius: 50px; padding: 10px 35px;">
 
-          <a href="#" class="btn-get-started"><i class="fa-solid fa-magnifying-glass">
+          <a href="{% url 'recommandation' %}" class="btn-get-started"><i class="fa-solid fa-magnifying-glass">
          
           </i> Recommander </a>
         </div>

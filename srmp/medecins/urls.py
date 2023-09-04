@@ -6,4 +6,6 @@ urlpatterns = [
     
    path("",views.docteurs,name='medecin'),
    
+   path("signup/",views.signup,name='signup'),
+   
 ]
