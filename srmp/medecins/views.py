@@ -23,3 +23,4 @@ def signup(request):
 
         return redirect('home')
     return render(request, "pages/signup.html")
+
