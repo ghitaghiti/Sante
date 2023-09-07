@@ -48,3 +48,6 @@ def generate_doctor_recommendation(patient_input):
         max_tokens=500
     )
     return response.choices[0].text.strip()
+
+def produit(request):
+    return render(request,"pages/produit.html")

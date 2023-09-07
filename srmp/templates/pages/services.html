@@ -8,7 +8,7 @@
       <div class="section-title">
         <br>
         <h2>Services</h2>
-        <p>Ces services combinés offrent aux utilisateurs une expérience de recherche de médecin personnalisée,
+        <p style="text-align: justify;">Ces services combinés offrent aux utilisateurs une expérience de recherche de médecin personnalisée,
            pratique et fiable,tout en les aidant à prendre des décisions éclairées pour leur santé.
            En résumé, un site de recommandation de médecin personnalisé offre aux utilisateurs 
            une plateforme conviviale pour trouver des médecins adaptés à leurs besoins, 
@@ -19,7 +19,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="fa-solid fa-user-doctor"></i></i></div>
-            <h4><a href="">Chercher un docteur</a></h4>
+            <h4><a href="{% url 'medecin' %}">Chercher un docteur</a></h4>
             <p>Le site utilise des algorithmes pour générer des recommandations personnalisées de médecins en 
               fonction des préférences et des besoins spécifiques de chaque utilisateur</p>
             </div>
@@ -29,7 +29,8 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
               <div class="icon-box">
                 <div class="icon"><i class="fa-solid fa-kit-medical"></i></div>
-                <h4><a href="">Produit complément alimentaire </a></h4>
+                <h4><a href="{% url 'produit' %}">Produit complément alimentaire</a></h4>
+                {% comment %} <h4><a href="{% url 'produit' %}"></a>Produit complément alimentaire</h4> {% endcomment %}
                 <p>Il est essentiel de souligner que les compléments alimentaires médicaux doivent être
                   utilisés conformément aux recommandations d'un professionnel de la santé.</p>
                 </div>
@@ -39,6 +40,7 @@
           <div class="icon-box">
             <div class="icon"><i class="fa-solid fa-comment"></i></div>
             <h4><a href="">Évaluations et commentaires</a></h4>
+            {% comment %} <h4><a href="{% url '' %}">Chercher un docteur</a></h4> {% endcomment %}
             <p>Vous peuvez consulter les évaluations et les commentaires laissés
                par d'autres patients qui ont consulté les médecins recommandés</p>
           </div>

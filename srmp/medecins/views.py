@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Docteurs, DocteurSignUp
+from .forms import AddDoctorForm
 
 def docteurs(request):
     doc={
@@ -23,4 +24,12 @@ def signup(request):
 
         return redirect('home')
     return render(request, "pages/signup.html")
+
+def adddoct(request):
+    if request.method == 'POST':
+        data= AddDoctorForm(request.POST, request.FILES)
+        if data.is_valid:
+            data.save()
+    return render(request, 'medecins/zoldik.html', {'form': AddDoctorForm})
+
 
