@@ -23,22 +23,22 @@
             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
               <label for="symptoms"> </label><br>
               <option selected>Spécialité</option>
-              {% for item in maladie %}
-              <option value="{{ item.id }}"> {{ item.names }} </option>
-            {% endfor %}
+              {% for symptoms in maladie %}
+              <option value="{{ symptoms.id }}"> {{ symptoms.names }} </option>
+              {% endfor %}
             </select>
           </div>
 
           
         <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+           <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
             <label for="ville"> </label><br>
             <option selected>la Ville</option>
             {% for item in ville %}
               <option value="{{ item.id }}"> {{ item.names }} </option>
             {% endfor %}
 
-          </select>
+          </select> 
           
         </div>
         <div class="form-floating"  style="width: 320px; margin-top: -35px; border-radius: 50px; padding: 10px 35px;">

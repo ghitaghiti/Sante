@@ -30,7 +30,6 @@
               <div class="icon-box">
                 <div class="icon"><i class="fa-solid fa-kit-medical"></i></div>
                 <h4><a href="{% url 'produit' %}">Produit complément alimentaire</a></h4>
-                {% comment %} <h4><a href="{% url 'produit' %}"></a>Produit complément alimentaire</h4> {% endcomment %}
                 <p>Il est essentiel de souligner que les compléments alimentaires médicaux doivent être
                   utilisés conformément aux recommandations d'un professionnel de la santé.</p>
                 </div>
@@ -39,8 +38,7 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="fa-solid fa-comment"></i></div>
-            <h4><a href="">Évaluations et commentaires</a></h4>
-            {% comment %} <h4><a href="{% url '' %}">Chercher un docteur</a></h4> {% endcomment %}
+            <h4><a href="{% url 'comments' %}">Commentaires</a></h4>
             <p>Vous peuvez consulter les évaluations et les commentaires laissés
                par d'autres patients qui ont consulté les médecins recommandés</p>
           </div>

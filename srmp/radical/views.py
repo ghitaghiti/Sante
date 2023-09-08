@@ -35,19 +35,26 @@ def signup(request):
 ### Systeme de recommandation
 
 def recommend_doctors(request):
-    patient_input = request.POST['symptoms']  # Assuming input field name is 'symptoms'
-    doctor_recommendation = generate_doctor_recommendation(patient_input)
-    return render(request, 'pages/recommandation.html', {'recommendation': doctor_recommendation})
+    if request.method == "POST":
+        print('in if')
+        patient_input = request.POST('symptoms')  # Assuming input field name is 'symptoms'
+        doctor_recommendation = generate_doctor_recommendation(patient_input)
+        return render(request, 'pages/recommandation.html', {'recommendation': doctor_recommendation})
+    print('out if')
+    return render(request, 'pages/recommandation.html')
 
 # pour generer un docteur a partir d'une liste des docteurs utilisant api d'openai
 def generate_doctor_recommendation(patient_input):
     prompt = f"Patient symptoms: {patient_input}\nRecommended doctors:"
-    response = open.Completion.create(
+    response = openai.Completion.create(
         engine="text-davinci-003",  # Choose an appropriate OpenAI engine
         prompt=prompt,
-        max_tokens=500
+        max_tokens=500,
     )
     return response.choices[0].text.strip()
 
 def produit(request):
     return render(request,"pages/produit.html")
+
+def comments(request):
+    return render(request,"pages/comments.html")

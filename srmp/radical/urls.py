@@ -11,5 +11,6 @@ urlpatterns = [
     path("signup/", views.signup,name="signup"),
     path("recommandation/", views.recommend_doctors,name="recommandation"),
     path("produit/", views.produit,name="produit"),
+    path("comments/", views.comments,name="comments"),
 
 ]

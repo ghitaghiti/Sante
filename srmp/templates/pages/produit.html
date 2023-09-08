@@ -2,48 +2,63 @@
 {% load static %}
 {% block content %}
 
-<section id="produit" class="produit">
-    <div class="container">
-      <br><br>
-     <h1>Produit complément alimentaire</h2><br><br>
 
-        <div class="nb">
-            <h2>N.B</h2>
-            <p>Chaque personne est unique, et les besoins en compléments alimentaires peuvent varier en fonction 
-                de l'état de santé individuel, du régime alimentaire et des autres facteurs. Un professionnel de la santé pourra vous fournir des recommandations personnalisées
-                 en fonction de votre situation spécifique.</p>
-         </div><br><br>
-     <div class="prod">
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Évaluations et commentaires</h2>
+  
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"><br> <br>
+        <a href="#" class="group"><br><br>
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"> <br><br><br>
+            <img src="{% static 'images/2.jpg' %}" alt="complement." class="h-full w-full object-cover object-center group-hover:opacity-75"  width="300" height="250">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">AKTIV A-Z VITAMINES ET <br> MINERAUX
+             30 COMPRIMES</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">32,547DT</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="{% static 'images/3.jpg' %}" alt="complement." class="h-full w-full object-cover object-center group-hover:opacity-75" width="300" height="250">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">AKTIV MAGNESIUM ET <br>VITAMINES </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">30,257DT</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="{% static 'images/4.jpg' %}" alt="complement." class="h-full w-full object-cover object-center group-hover:opacity-75"  width="300" height="250">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">AKTIV MEMOVIT</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">29,988DT</p>
+        </a>
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="{% static 'images/5.jpg' %}" alt="complement" class="h-full w-full object-cover object-center group-hover:opacity-75" width="300" height="250">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">AKTIV Vital yeux  <br>+ Omega 3</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">43,633DT</p>
+        </a>
+  
+          <a href="#" class="group">
+            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+              <img src="{% static 'images/6.jpg' %}" alt="complement" class="h-full w-full object-cover object-center group-hover:opacity-75" width="300" height="250">
+            </div>
+            <h3 class="mt-4 text-sm text-gray-700">AKTIV Vital Arteres</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">28,917DT</p>
+          </a>
 
-        <h4>Maladies cardiovasculaires :</h4>
-        <p>Huile de poisson (oméga-3) <br>
-            Coenzyme Q10 <br>
-            L-arginine <br>
-            Vitamine D <br>
-            Vitamine K2</p>
-            <br><br>
-
-
-        <h4>Diabète :</h4>
-        <p>Chrome <br>
-            Acide alpha-lipoïque <br>
-            Cannelle <br>
-            Ginseng <br>
-            Berbérine</p>
-             <br><br>
-
-
-        <h4>Stress et anxiété :</h4>
-        <p>Rhodiola rosea <br> Ashwagandha Camomille <br> L-théanine <br> Magnésium</p>
-                  <br><br>   
-
-        <h4>Stress et anxiété :</h4>
-        <p>Rhodiola rosea <br> Ashwagandha Camomille <br> L-théanine <br> Magnésium</p>
-            <br><br> 
-        
-     </div>
-     
+          <a href="#" class="group">
+            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+              <img src="{% static 'images/7.jpg' %}" alt="complement" class="h-full w-full object-cover object-center group-hover:opacity-75" width="300" height="250">
+            </div>
+            <h3 class="mt-4 text-sm text-gray-700">ALEONAT Aleogine Gel 50ML</h3>
+            <p class="mt-1 text-lg font-medium text-gray-900">8,211DT</p>
+          </a>
+       
+      </div>
+      
+       
+      </div>
     </div>
-  </section> 
+  </div>
   
  {% endblock content %}
