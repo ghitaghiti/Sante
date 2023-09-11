@@ -89,11 +89,29 @@
                   <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 300px; max-height: 200px;"/>
               </a>
                <div class="p-5">
-                <i class="fas fa-star text-warning fa-xs"></i>
-                <i class="fas fa-star text-warning fa-xs"></i>
-                <i class="fas fa-star text-warning fa-xs"></i>
-                <i class="fas fa-star text-warning fa-xs"></i>
-                <i class="fas fa-star text-warning fa-xs"></i>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <style>
+                  .stars i.active {
+                    color: #ff9c1a;
+                  }
+                </style>
+                <script>
+                  // Select all elements with the "i" tag and store them in a NodeList called "stars"
+                  const stars = document.querySelectorAll(".stars i");
+                  stars.forEach((star, index1) => {
+                    star.addEventListener("click", () => {
+                      stars.forEach((star, index2) => {
+                        index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+                      });
+                    });
+                  });
+                </script>
                 <a href="#">
                 <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{item.fullname}}</h4>
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
