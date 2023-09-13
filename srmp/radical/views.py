@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from .models import Maladie,Villes
+from django.http import HttpResponse
 import openai
 from medecins.models import Docteurs
 from patient.models import Patient
 
-openai.api_key = ""
 
 def home(request):
     maladieville ={
@@ -36,22 +36,29 @@ def signup(request):
 
 def recommend_doctors(request):
     if request.method == "POST":
-        print('in if')
-        patient_input = request.POST('symptoms')  # Assuming input field name is 'symptoms'
-        doctor_recommendation = generate_doctor_recommendation(patient_input)
+        patient_input = request.POST.get('symptoms') # Assuming input field name is 'symptoms'
+        patient_location = request.POST.get('ville')
+        doctor_recommendation = generate_doctor_recommendation(patient_input, patient_location)
         return render(request, 'pages/recommandation.html', {'recommendation': doctor_recommendation})
-    print('out if')
+
     return render(request, 'pages/recommandation.html')
 
 # pour generer un docteur a partir d'une liste des docteurs utilisant api d'openai
-def generate_doctor_recommendation(patient_input):
-    prompt = f"Patient symptoms: {patient_input}\nRecommended doctors:"
+openai.api_key = "API KEY"
+def generate_doctor_recommendation(patient_input, patient_location):
+    prompt = f"Je recherche des médecins au Maroc spécialisés en ces symptômes {patient_input} et situés à {patient_location}. Pouvez-vous recommander des médecins avec leurs informations ?"
     response = openai.Completion.create(
-        engine="text-davinci-003",  # Choose an appropriate OpenAI engine
+        engine='text-davinci-003',
         prompt=prompt,
-        max_tokens=500,
+        max_tokens=1000,
+        stop=None,
+        temperature=0.7
     )
-    return response.choices[0].text.strip()
+
+    recommendations_text = response.choices[0].text.strip()
+    recommendations = recommendations_text.split('\n') 
+    recommendations = [line.strip() for line in recommendations if line.strip()]
+    return recommendations
 
 def produit(request):
     return render(request,"pages/produit.html")
