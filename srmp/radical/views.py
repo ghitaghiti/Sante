@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from .models import Maladie,Villes
+from django.shortcuts import render, redirect
+from .models import Maladie,Villes,Question
 import openai
 from medecins.models import Docteurs
 from patient.models import Patient
+from .models import Question
 
 # openai.api_key = ""
 
@@ -81,5 +82,13 @@ def recommend_doctors(request):
 def produit(request):
     return render(request,"pages/produit.html")
 
-def comments(request):
-    return render(request,"pages/comments.html")
+
+def faq(request):
+    questions = Question.objects.all()
+    # return render(request, "pages/faq.html", {'questions': questions})
+    if request.method == 'POST':
+        question_text = request.POST['quest']
+        question = Question(question_text=question_text)
+        question.save()
+        return redirect('faq')
+    return render(request, 'pages/faq.html')

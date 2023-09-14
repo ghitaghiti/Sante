@@ -40,7 +40,7 @@
             color: #fff;
             border: none;
             border-radius:17px;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
             margin-right: 1%;
             margin-left: 2%;
@@ -52,7 +52,7 @@
             color: #fff;
             border: none;
             border-radius: 17px;
-            font-size: 15px;
+            font-size: 20px;
             cursor: pointer;
             margin-right: 1%;
             text-align: center;
@@ -61,8 +61,7 @@
           a {
             color: #007bff;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
+            font-size: 20px;
           }
           .a {
             color:white;
@@ -70,7 +69,7 @@
         </style>
         
         <form action="/rechercher" method="GET">
-          <input type="text" name="query" placeholder="Chercher un Docteur" />
+          <input type="text" name="query" placeholder="Chercher un Docteur" data-search/>
           <button type="submit">Chercher...</button>
           <button><a class="a" href="{% url 'login' %}">Ajouter un médecin</a></button> 
           {% comment %} <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px;"><a href="{% url 'login' %}">Ajouter un médecin</a></button> {% endcomment %}
@@ -86,7 +85,7 @@
           {% comment %} <div class="member d-flex align-items-start"> {% endcomment %}
             <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"><br><br>
               <a href="#">
-                <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 300px; max-height: 200px;"/>
+                  <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 300px; max-height: 200px;"/>
               </a>
               <div class="p-5">
                 <div class="stars">
@@ -140,4 +139,4 @@
     
     <!-- Template Main JS File -->
     <script src="{% static 'js/main.js' %}"></script>
-    {% endblock content %}   
+    {% endblock content %}  
