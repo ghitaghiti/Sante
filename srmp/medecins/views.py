@@ -3,8 +3,13 @@ from .models import Docteurs, DocteurSignUp
 from .forms import AddDoctorForm
 
 def docteurs(request):
+    if 'searched' in request.GET:
+        searched = request.GET['searched']
+        data = Docteurs.objects.filter(fullname__icontains=searched)
+    else:
+        data = Docteurs.objects.all()
     doc={
-      'medecin': Docteurs.objects.all(),
+      'medecin': data,
     }
     return render(request, 'medecins/docteurs.html',doc)
 

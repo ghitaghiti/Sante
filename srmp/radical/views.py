@@ -44,7 +44,7 @@ def recommend_doctors(request):
     return render(request, 'pages/recommandation.html')
 
 # pour generer un docteur a partir d'une liste des docteurs utilisant api d'openai
-openai.api_key = "API KEY"
+openai.api_key = ""
 def generate_doctor_recommendation(patient_input, patient_location):
     prompt = f"Je recherche des médecins au Maroc spécialisés en ces symptômes {patient_input} et situés à {patient_location}. Pouvez-vous recommander des médecins avec leurs informations ?"
     response = openai.Completion.create(
