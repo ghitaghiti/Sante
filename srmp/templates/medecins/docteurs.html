@@ -58,28 +58,33 @@
             text-align: center;
             
           }
+<<<<<<< HEAD
           {% comment %} a {
             color: #007bff;
             text-decoration: none;
             font-size: 20px;
           } {% endcomment %}
+=======
+>>>>>>> 627bc77e9cc6a38ab0b1ec2698f6e08234e6581f
           .a {
             color:white;
           }
         </style>
         
-        <form action="/rechercher" method="GET">
-          <input type="text" name="query" placeholder="Chercher un Docteur" data-search/>
+        <form action="{% url 'medecin' %}" method="GET">
+          {% csrf_token %}
+          <input type="text" name="searched" placeholder="Chercher un Docteur"/>
           <button type="submit">Chercher...</button>
           <button><a class="a" href="{% url 'login' %}">Ajouter un médecin</a></button> 
           {% comment %} <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px;"><a href="{% url 'login' %}">Ajouter un médecin</a></button> {% endcomment %}
-
+        </form>
         <div class="container"><br>
         <p style="text-align: justify;">Les recommandations de médecins peuvent être précieuses lorsqu'il s'agit de choisir un nouveau médecin,
            surtout si vous recherchez une spécialité spécifique ou si vous avez des besoins de santé particuliers.</p>
            <br><br>
       </div>
       <div class="row">
+<<<<<<< HEAD
         {% for item in medecin %}
         <div class="col-lg-6 mt-4">
           {% comment %} <div class="member d-flex align-items-start"> {% endcomment %}
@@ -107,25 +112,54 @@
                     star.addEventListener("click", () => {
                       stars.forEach((star, index2) => {
                         index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+=======
+          {% for item in medecin %}
+          <div class="col-lg-6 mt-4">
+            {% comment %} <div class="member d-flex align-items-start"> {% endcomment %}
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"><br><br>
+                <a href="#">
+                    <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 300px; max-height: 200px;"/>
+                </a>
+                <div class="p-5">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <style>
+                    .stars i.active {
+                      color: #ff9c1a;
+                    }
+                  </style>
+                  <script>
+                    // Select all elements with the "i" tag and store them in a NodeList called "stars"
+                    const stars = document.querySelectorAll(".stars i");
+                    stars.forEach((star, index1) => {
+                      star.addEventListener("click", () => {
+                        stars.forEach((star, index2) => {
+                          index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+                        });
+>>>>>>> 627bc77e9cc6a38ab0b1ec2698f6e08234e6581f
                       });
                     });
-                  });
-                </script>
-                <a href="#">
-                <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{item.fullname}}</h4>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </a>
-                <span>{{item.specialitesmedicales}}</span>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.telephone }} </p> 
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.email }} </p> 
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.adresse }} </p> 
-                
-                  <br><br>
-              {% comment %} </div> {% endcomment %}
+                  </script>
+                  <a href="#">
+                  <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{item.fullname}}</h4>
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </a>
+                  <span>{{item.specialitesmedicales}}</span>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.telephone }} </p> 
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.email }} </p> 
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {{item.adresse }} </p> 
+                  
+                    <br><br>
+                {% comment %} </div> {% endcomment %}
+                </div>
               </div>
-            </div>
-          </div> 
-        {% endfor %}
+            </div> 
+          {% endfor %}
       </div>
 
     </div>

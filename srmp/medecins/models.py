@@ -11,7 +11,7 @@ class Docteurs(models.Model):
     sexe = models.CharField(max_length=1, choices=sexe_choix)
     adresse=models.CharField(max_length=200)
     email=models.EmailField(max_length=100)
-    telephone = models.IntegerField()
+    telephone = models.CharField(max_length=50)
     image= models.ImageField(upload_to= 'photos/%d/%m/%y')
     specialitesmedicales=models.CharField(max_length=100)
     
