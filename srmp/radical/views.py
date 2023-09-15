@@ -5,7 +5,7 @@ from medecins.models import Docteurs
 from patient.models import Patient
 from .models import Question
 
-# openai.api_key = ""
+# openai.api_key = "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"
 
 def home(request):
     maladieville ={
@@ -42,7 +42,7 @@ def recommend_doctors(request):
         specialty = request.POST.get('symptoms')
 
         # Appel à OpenAI pour générer la recommandation des médecins
-        openai.api_key = ''
+        openai.api_key = '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'
         prompt = f"Trouvez des médecins à {city} spécialisés en {specialty}."
         response = openai.Completion.create(
             engine='text-davinci-003',

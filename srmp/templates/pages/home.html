@@ -6,55 +6,39 @@
     <div class="container">
 
       <h1>Welcome to SRMP</h1>
-      <h2>Système de Recommandation de Médecin Personnalisé</h2>
-      {% comment %} <form method="POST">
-        {% csrf_token %}
-          <label for="symptoms">Enter your symptoms:</label><br>
-          <textarea name="symptoms" rows="4" cols="50"></textarea><br>
-          <input type="submit" value="Get Recommendations">
-        </form> {% endcomment %}
-    
+      <h2>Système de Recommandation de Médecin Personnalisé</h2><br>
 
-      <form method="POST" style="display: flex; margin-top: 35px;" >
+      <form method="POST" style="display: flex; margin-top: 35px;" action="{% url 'recommend_doctors' %}">
         {% csrf_token %}
 
-        {% comment %} <div class="mb-3"> {% endcomment %}
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
-              <label for="symptoms"> </label><br>
-              <option selected>Spécialité</option>
-              {% for symptoms in maladie %}
-              <option value="{{ symptoms.id }}"> {{ symptoms.names }} </option>
-              {% endfor %}
-            </select>
-          </div>
+        <div class="form-floating">
+          <label for="symptoms"> </label>
+          <select name="symptoms" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+            <option selected disabled>Symptômes...</option>
+            {% for symptoms in maladie %}
+            <option value="{{ symptoms.names }}"> {{ symptoms.names }} </option>
+            {% endfor %}
+          </select>
+        </div>
 
           
         <div class="form-floating">
-           <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
-            <label for="ville"> </label><br>
-            <option selected>la Ville</option>
+          <label for="ville"> </label>
+          <select name="ville" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+            <option selected disabled>Villes...</option>
             {% for item in ville %}
-              <option value="{{ item.id }}"> {{ item.names }} </option>
+              <option value="{{ item.names }}"> {{ item.names }} </option>
             {% endfor %}
-
           </select> 
-          
         </div>
         <div class="form-floating"  style="width: 320px; margin-top: -35px; border-radius: 50px; padding: 10px 35px;">
-
-          <a href="{% url 'recommend_doctors' %}" class="btn-get-started"><i class="fa-solid fa-magnifying-glass">
-         
-          </i> Recommander </a>
+          <button type="submit" class="btn-get-started" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i> Recommander</button>
         </div>
       </form>
-          
-        </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
     
-    <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
 
@@ -66,8 +50,7 @@
                 SRMP est un système de recommandation de médecin efficace et précis.
                  Capable de prendre en compte différents critères tels que la spécialité médicale, l'expérience, les compétences,
                   les avis des patients et d'autres facteurs pertinents pour générer des recommandations personnalisées pour chaque patient.
-              </p>
-              
+              </p>   
             </div>
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
@@ -79,8 +62,7 @@
                     <h4>Personnalisation :</h4>
                     <p style="text-align: left;">Un bon système de recommandation peut prendre en compte les préférences et les besoins 
                       spécifiques de chaque utilisateur. Il peut suggérer des médecins en
-                      fonction de la localisation, de la spécialité, des langues parlées....</p>
-                      
+                      fonction de la localisation, de la spécialité, des langues parlées....</p>     
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
@@ -90,36 +72,24 @@
                     <p style="text-align: left;">Rechercher un médecin peut être chronophage, en particulier lorsque
                       l'on tient compte de différents facteurs tels que la disponibilité,
                       les horaires de consultation, les spécialités, etc .</p>
-                    
                       </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa-solid fa-clock"></i>
-                    {% comment %} <img src="{% static 'chemin'%}" alt="hh"> {% endcomment %}
                     <h4>Accessibilité et disponibilité : </h4>
                     <p style="text-align: left;">Les systèmes de recommandation en ligne sont accessibles 24 heures sur 24, 7 jours sur 7, 
                       ce qui permet aux utilisateurs de rechercher des médecins à tout moment .</p>
-                      
                   </div>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div>
           </div>
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
-
-   
- 
-
-    
-
-    
-
-  </main><!-- End #main -->
-
+    </section>
+  </main>
   
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -136,3 +106,120 @@
   
 </body> 
 {% endblock content %}   
+
+
+
+{% comment %} {% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<body>
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+
+      <h1>Welcome to SRMP</h1>
+      <h2>Système de Recommandation de Médecin Personnalisé</h2><br>
+
+      <form method="POST" style="display: flex; margin-top: 35px;" action="{% url 'recommandation' %}">
+        {% csrf_token %}
+
+        <div class="form-floating">
+          <label for="symptoms"> </label>
+          <select name="symptoms" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+            <option selected disabled>Symptômes...</option>
+            {% for symptoms in maladie %}
+            <option value="{{ symptoms.names }}"> {{ symptoms.names }} </option>
+            {% endfor %}
+          </select>
+        </div>
+
+          
+        <div class="form-floating">
+          <label for="ville"> </label>
+          <select name="ville" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
+            <option selected disabled>Villes...</option>
+            {% for item in ville %}
+              <option value="{{ item.names }}"> {{ item.names }} </option>
+            {% endfor %}
+          </select> 
+        </div>
+        <div class="form-floating"  style="width: 320px; margin-top: -35px; border-radius: 50px; padding: 10px 35px;">
+
+          <a href="{% url 'recommend_doctors' %}" class="btn-get-started"><i class="fa-solid fa-magnifying-glass">
+         
+          </i> Recommander </a>
+
+          <button type="submit" class="btn-get-started" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i> Recommander</button>
+
+        </div>
+      </form>
+  </section>
+
+  <main id="main">
+    
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Pourquoi SRMP ?</h3>
+              <p>
+                SRMP est un système de recommandation de médecin efficace et précis.
+                 Capable de prendre en compte différents critères tels que la spécialité médicale, l'expérience, les compétences,
+                  les avis des patients et d'autres facteurs pertinents pour générer des recommandations personnalisées pour chaque patient.
+              </p>   
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-sharp fa-solid fa-stethoscope"></i>
+                    <h4>Personnalisation :</h4>
+                    <p style="text-align: left;">Un bon système de recommandation peut prendre en compte les préférences et les besoins 
+                      spécifiques de chaque utilisateur. Il peut suggérer des médecins en
+                      fonction de la localisation, de la spécialité, des langues parlées....</p>     
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-solid fa-hourglass-start"></i>
+                    <h4>Gain de temps : </h4>
+                    <p style="text-align: left;">Rechercher un médecin peut être chronophage, en particulier lorsque
+                      l'on tient compte de différents facteurs tels que la disponibilité,
+                      les horaires de consultation, les spécialités, etc .</p>
+                      </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="fa-solid fa-clock"></i>
+                    <h4>Accessibilité et disponibilité : </h4>
+                    <p style="text-align: left;">Les systèmes de recommandation en ligne sont accessibles 24 heures sur 24, 7 jours sur 7, 
+                      ce qui permet aux utilisateurs de rechercher des médecins à tout moment .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  
+</body> 
+{% endblock content %}    {% endcomment %}

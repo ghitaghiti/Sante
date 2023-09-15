@@ -58,11 +58,11 @@
             text-align: center;
             
           }
-          a {
+          {% comment %} a {
             color: #007bff;
             text-decoration: none;
             font-size: 20px;
-          }
+          } {% endcomment %}
           .a {
             color:white;
           }
@@ -83,7 +83,7 @@
         {% for item in medecin %}
         <div class="col-lg-6 mt-4">
           {% comment %} <div class="member d-flex align-items-start"> {% endcomment %}
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"><br><br>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="max-height: 90%;"><br><br>
               <a href="#">
                   <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 300px; max-height: 200px;"/>
               </a>
