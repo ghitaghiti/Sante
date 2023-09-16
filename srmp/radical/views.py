@@ -53,7 +53,7 @@ def recommend_doctors(request):
             max_tokens=500,
         )
 
-        doctors = response.choices
+        doctors = response.choices[0].text.split("\n") 
 
         return render(request, 'pages/recommend_doctors.html', {'doctors': doctors})
 
