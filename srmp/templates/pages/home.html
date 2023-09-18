@@ -5,7 +5,7 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
 
-      <h1>Welcome to SRMP</h1>
+      <h1>Bienvenue au SRMP</h1>
       <h2>Système de Recommandation de Médecin Personnalisé</h2><br>
 
       <form method="POST" style="display: flex; margin-top: 35px;" action="{% url 'recommandation' %}">
@@ -13,19 +13,18 @@
 
         <div class="form-floating">
           <label for="symptoms"> </label>
-          <select name="symptoms" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 350px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
-            <option selected disabled>Symptômes...</option>
+          <select name="symptoms" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 300px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;" required>
+            <option value="" selected disabled>Symptômes...</option>
             {% for symptoms in maladie %}
-            <option value="{{ symptoms.names }}"> {{ symptoms.names }} </option>
+              <option value="{{ symptoms.names }}"> {{ symptoms.names }} </option>
             {% endfor %}
           </select>
         </div>
 
-          
         <div class="form-floating">
           <label for="ville"> </label>
-          <select name="ville" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;">
-            <option selected disabled>Villes...</option>
+          <select name="ville" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 220px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;" required>
+            <option value="" selected disabled>Villes...</option>
             {% for item in ville %}
               <option value="{{ item.names }}"> {{ item.names }} </option>
             {% endfor %}
@@ -59,8 +58,8 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa-sharp fa-solid fa-stethoscope"></i>
-                    <h4>Personnalisation :</h4>
-                    <p style="text-align: left;">Un bon système de recommandation peut prendre en compte les préférences et les besoins 
+                    <h4>Personnalisation</h4>
+                    <p style="text-align: center;">Un bon système de recommandation peut prendre en compte les préférences et les besoins 
                       spécifiques de chaque utilisateur. Il peut suggérer des médecins en
                       fonction de la localisation, de la spécialité, des langues parlées....</p>     
                   </div>
@@ -68,8 +67,8 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa-solid fa-hourglass-start"></i>
-                    <h4>Gain de temps : </h4>
-                    <p style="text-align: left;">Rechercher un médecin peut être chronophage, en particulier lorsque
+                    <h4>Gain de temps</h4>
+                    <p style="text-align: center;">Rechercher un médecin peut être chronophage, en particulier lorsque
                       l'on tient compte de différents facteurs tels que la disponibilité,
                       les horaires de consultation, les spécialités, etc .</p>
                       </div>
@@ -77,8 +76,8 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa-solid fa-clock"></i>
-                    <h4>Accessibilité et disponibilité : </h4>
-                    <p style="text-align: left;">Les systèmes de recommandation en ligne sont accessibles 24 heures sur 24, 7 jours sur 7, 
+                    <h4>Accessibilité et disponibilité</h4>
+                    <p style="text-align: center;">Les systèmes de recommandation en ligne sont accessibles 24 heures sur 24, 7 jours sur 7, 
                       ce qui permet aux utilisateurs de rechercher des médecins à tout moment .</p>
                   </div>
                 </div>
@@ -86,7 +85,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </main>

@@ -1,15 +1,7 @@
- <!-- ======= Header ======= -->
  {% load static %}
  <header id="header" class="fixed-top">
-  {% comment %} <nav class="sticky">
-    <!-- Contenu de votre nav bar -->
-  </nav> {% endcomment %}
-  <div class="container d-flex align-items-center">
-
-    {% comment %} <h1 class="logo me-auto"><a href="{% url 'home' %}">SRMP</a></h1> {% endcomment %}
-    
-   <a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid"></a>
-
+  <div class="container d-flex align-items-center">    
+    <a href="{% url 'home' %}" class="logo me-auto" style="max-height: 10rem;"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid" style="width: 7rem;"></a>
     <nav id="navbar" class="navbar order-last order-lg-0 " >
       <ul>
         <li><a class="nav-link" href="{% url 'home' %}">Accueil</a></li>
@@ -22,9 +14,6 @@
        
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  
-
+    </nav>
   </div>
-</header><!-- End Header -->
+</header>

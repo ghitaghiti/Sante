@@ -13,9 +13,6 @@ def docteurs(request):
     }
     return render(request, 'medecins/docteurs.html',doc)
 
-# def apoint(request):
-     
-#     return render(request, 'medecins/apoint.html')
 
 def signup(request):
     if request.method == 'POST':

@@ -3,17 +3,6 @@
 
 <br><br><br><br>
 <h2>Doctor Recommendations</h2>
-{% comment %} <ul role="list" class="divide-y divide-gray-100">
-    {% for recommendations in recommendation %}
-    <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-            <div class="min-w-0 flex-auto">
-                <p class="text-sm font-semibold leading-6 text-gray-900">{{ recommendations }}</p>
-            </div>
-        </div>
-    </li>
-    {% endfor %}
-</ul> {% endcomment %}
 <br>
 <table class="table">
     <tbody>
@@ -24,12 +13,6 @@
         {% endfor %}
     </tbody>
 </table>
-
-{% comment %} <ul>
-    {% for recommendations in recommendation %}
-      <li>{{ recommendations }}</li>
-    {% endfor %}
-</ul> {% endcomment %}
 
 {% endblock content %}
 
