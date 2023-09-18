@@ -8,6 +8,7 @@ urlpatterns = [
     path("", include("radical.urls")),
     path("medecins/", include("medecins.urls")),
     path("patient/", include("patient.urls")),
+    path("dashboard/", include("dashboard.urls")),
     
    
    

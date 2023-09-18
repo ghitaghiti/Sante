@@ -17,7 +17,7 @@ def docteurs(request):
      
 #     return render(request, 'medecins/apoint.html')
 
-def signup(request):
+def signin(request):
     if request.method == 'POST':
         # Process the valid form data
         fullname = request.POST.get('fullname')

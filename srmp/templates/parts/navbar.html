@@ -8,7 +8,7 @@
 
     {% comment %} <h1 class="logo me-auto"><a href="{% url 'home' %}">SRMP</a></h1> {% endcomment %}
     
-   <a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid"></a>
+   <a href="{% url 'home' %}" class="logo me-auto" style="max-height: 10rem;"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid"></a>
 
     <nav id="navbar" class="navbar order-last order-lg-0 " >
       <ul>
@@ -17,8 +17,8 @@
         <li><a class="nav-link" href="{% url 'services' %}">Services</a></li> 
         <li><a class="nav-link" href="{% url 'propos' %}">À propos</a></li>
         <li><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>  
-        <li><a class="nav-link" href="{% url 'login' %}">Sign</a></li> 
-        <li><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li> 
+        <li><a class="nav-link" href="{% url 'signin' %}">Sign-in</a></li> 
+        <li><a class="nav-link" href="{% url 'signup' %}">Sign-up</a></li> 
        
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>

@@ -9,22 +9,9 @@
       <br><br>
       <div class="section-title">
         <h2>Médecin</h2>
-        {% comment %} <form action="/rechercher" method="GET">
-          
-          <input type="text" name="query" placeholder="Chercher un Docteur" />
-          <button style="margin-right: 30%;" type="submit">Chercher...</button>
-          <a  href="{% url 'login' %}"> Ajouter un medecin </a>
-        </form> {% endcomment %}
         
         <style>
-          {% comment %} form {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 500px;
-            margin: 0 auto;
-          } {% endcomment %}
-        
+         
           input[type="text"] {
             padding: 8px;
             border: 1px solid #ccc;
@@ -58,14 +45,6 @@
             text-align: center;
             
           }
-<<<<<<< HEAD
-          {% comment %} a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 20px;
-          } {% endcomment %}
-=======
->>>>>>> 627bc77e9cc6a38ab0b1ec2698f6e08234e6581f
           .a {
             color:white;
           }
@@ -75,7 +54,7 @@
           {% csrf_token %}
           <input type="text" name="searched" placeholder="Chercher un Docteur"/>
           <button type="submit">Chercher...</button>
-          <button><a class="a" href="{% url 'login' %}">Ajouter un médecin</a></button> 
+          <button><a class="a" href="{% url 'signup' %}">Ajouter un médecin</a></button> 
           {% comment %} <button style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px;"><a href="{% url 'login' %}">Ajouter un médecin</a></button> {% endcomment %}
         </form>
         <div class="container"><br>

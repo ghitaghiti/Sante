@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     
+    "dashboard.apps.DashboardConfig",
     "patient.apps.PatientConfig",
     "medecins.apps.MedecinsConfig",
     "radical.apps.RadicalConfig",
