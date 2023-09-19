@@ -1,58 +1,56 @@
- <!-- ======= Footer ======= -->
  <footer id="footer">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>SRMP</h3>
-            <p>
-              Immeuble El Harti, angle Bd Allal 
-              Ben Abdallah et Bd Youssef Ben Tachfine <br>
-              Oujda<br>
-              <br>
-              <strong>Phone:</strong> +212536688118<br>
-              <strong>Email:</strong> 
-              contact@ecole-ntsi.com<br>
-            </p>
-          </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>SRMP</h3>
+          <p>
+            Immeuble El Harti, angle Bd Allal 
+            Ben Abdallah et Bd Youssef Ben Tachfine <br>
+            Oujda<br>
+            <br>
+            <strong>Phone:</strong> +212536688118<br>
+            <strong>Email:</strong> 
+            contact@ecole-ntsi.com<br>
+          </p>
+        </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Liens Utiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'medecin' %}">Médecin</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'propos' %}">À propos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact' %}">Contact</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Médecin</a></li>
+              {% comment %} <li><i class="bx bx-chevron-right"></i> <a href="#">Rendez-vous</a></li> {% endcomment %}
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">À propos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Nos Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'medecin' %}">Chercher un Docteur</a></li> 
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'produit' %}">Produit complément alimentaire</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'faq' %}">FAQ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Recommandation</a></li> 
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Chercher un Docteur</a></li>
               
               
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Rejoignez notre newsletter</h4>
-            {% comment %} <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> {% endcomment %}
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Rejoignez notre newsletter</h4>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
         </div>
+
       </div>
     </div>
+  </div>
 
-    <div class="container d-md-flex py-4">
+  <div class="container d-md-flex py-4">
 
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="https://www.facebook.com/ecole.ntsi" target="_blank"><i class="fab fa-facebook"></i></a>

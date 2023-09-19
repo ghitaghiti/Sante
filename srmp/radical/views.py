@@ -3,7 +3,7 @@ from .models import Maladie,Villes,Question
 import openai
 from .models import Question
 
-# openai.api_key = "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"
+# openai.api_key = ""
 
 def home(request):
     maladieville ={
@@ -36,7 +36,7 @@ def recommend_doctors(request):
         specialty = request.POST.get('symptoms')
 
         # Appel à OpenAI pour générer la recommandation des médecins
-        openai.api_key = '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'
+        openai.api_key = ''
         prompt = f"Trouvez des médecins à {city} spécialisés en {specialty}."
         response = openai.Completion.create(
             engine='text-davinci-003',
