@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Maladie,Villes,Question
+from .models import Maladie,Villes
 import openai
-from .models import Question
+
 
 # openai.api_key = ""
 
@@ -58,12 +58,5 @@ def produit(request):
     return render(request,"pages/produit.html")
 
 
-def faq(request):
-    questions = Question.objects.all()
-    # return render(request, "pages/faq.html", {'questions': questions})
-    if request.method == 'POST':
-        question_text = request.POST['quest']
-        question = Question(question_text=question_text)
-        question.save()
-        return redirect('faq')
-    return render(request, 'pages/faq.html')
+def specialites(request):
+    return render(request, 'pages/specialites.html')

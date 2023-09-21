@@ -9,6 +9,7 @@
 <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
 <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
 <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+<link type="text/css" href="{% static 'dashboard/css/volt.css'%}" rel="stylesheet">  
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -50,7 +51,23 @@
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">Create Account </h1>
                             </div>
-                            <form action="{% url 'signup' %}" class="mt-4">
+                        <div class="mt-4">
+                            <br>
+                            <form action="{% url 'signup' %}" method="POST" >
+
+                                {% csrf_token %}
+                                {% if form.errors %}
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                      Your Form Has Errors
+                                      {% for field in form %}
+                                          {% if field.errors %}
+                                              {{ field.errors }}
+                                          {% endif %}
+                                      {% endfor %}
+                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endif %}
+
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
@@ -95,9 +112,11 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-gray-800">Sign up</button>
+                                    <button type="submit" value="Sign up" class="btn btn-gray-800">Sign up</button>
                                 </div>
+                            
                             </form>
+                            </div>
                             <div class="mt-3 mb-4 text-center">
                                 <span class="fw-normal">or login with</span>
                             </div>

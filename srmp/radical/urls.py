@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import faq
+# from .views import specialites
 
 urlpatterns = [
     path("", views.home,name="home" ),
@@ -10,6 +10,6 @@ urlpatterns = [
     path("contact/", views.contact,name="contact"),
     path('recommend/',views.recommend_doctors, name='recommend_doctors'),
     path("produit/", views.produit,name="produit"),
-    path('faq/', views.faq, name='faq'),
+    path('spécialités/', views.specialites, name='specialites'),
 
 ]
