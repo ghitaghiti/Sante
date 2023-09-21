@@ -51,7 +51,8 @@
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">Sign in to our platform</h1>
                             </div>
-                            <form  class="mt-4" action="{% url 'signin' %}">
+                            <form  class="mt-4"  method="POST" action="{% url 'signin' %}">
+                                {% csrf_token %}
                                 <!-- Form -->
                                 <div class="form-group mb-4">
                                     <label for="email">Your Email</label>
@@ -87,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-gray-800">Sign in</button>
+                                    <button type="submit" value="Sign in" class="btn btn-gray-800">Sign in</button>
                                 </div>
                             </form>
                             <div class="mt-3 mb-4 text-center">

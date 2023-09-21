@@ -10,6 +10,6 @@ urlpatterns = [
     path("contact/", views.contact,name="contact"),
     path('recommend/',views.recommend_doctors, name='recommend_doctors'),
     path("produit/", views.produit,name="produit"),
-    path('spécialités/', views.specialites, name='specialites'),
+    path('spécialités/', views.doctor_specialties, name='specialites'),
 
 ]

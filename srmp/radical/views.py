@@ -32,12 +32,13 @@ def contact(request):
 
 def recommend_doctors(request):
     if request.method == 'POST':
-        city = request.POST.get('ville')
-        specialty = request.POST.get('symptoms')
+        city = request.POST['ville']
+        specialty = request.POST['symptoms']
 
         # Appel à OpenAI pour générer la recommandation des médecins
         openai.api_key = ''
-        prompt = f"Trouvez des médecins à {city} spécialisés en {specialty}."
+        prompt = f"Recommander des médecins à {city} spécialisés en {specialty},\
+                    et donnez leurs adresse et telephone si c'est possible."
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -58,5 +59,6 @@ def produit(request):
     return render(request,"pages/produit.html")
 
 
-def specialites(request):
-    return render(request, 'pages/specialites.html')
+
+def doctor_specialties(request):
+    return render(request,"pages/specialites.html")

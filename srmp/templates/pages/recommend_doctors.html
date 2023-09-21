@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<br><br><br><br>
+<h4 style="color:green;">Doctor Recommendations</h4>
+<br>
+<div class="row">
+    {% for doctor in doctors %}
+        <div class="col-lg-6 mt-4">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="max-height: 90%;">
+                <div class="p-4">
+                    <br/>
+                    <img src="{% static 'images/doctors/doctors-5.jpg' %}" alt="complement" class="h-full w-full object-cover object-center group-hover:opacity-75" width="300" height="250">
+                    <h5 class="mb-2" style="color: #007bff">{{doctor}}</h5>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    <br/>
+                </div>
+            </div>
+        </div> 
+    {% endfor %}
+</div> 
+
+{% endblock content %}
+

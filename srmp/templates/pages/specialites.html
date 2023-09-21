@@ -2,12 +2,96 @@
 {% load static %}
 {% block content %}
 
-<div class="faq"><br><br><br>
 
-  <h1>hi</h1>
-</div>
-   
-    
-    
-  
+
+
+
+<br> <br><br><br>
+<html>
+<head>
+    <title>Liste des spécialités des médecins</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body><br><br><br>
+    <h1>Liste des spécialités des médecins</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cardiologue</th>
+                <th>Gynécologie</th>
+            </tr>
+            <tr>
+              <th>Oto-rhino-laryngologie (ORL)
+              </th>
+              <th>Médecine générale
+              </th>
+          </tr>
+          <tr>
+            <th>Neurologie</th>
+            <th>Radiologie</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pédiatrie</td>
+                <td>Dermatologie</td>
+            </tr>
+            <tr>
+                <td>Psychiatrie
+                </td>
+                <td>Ophtalmologie</td>
+            </tr>
+            <tr>
+              <td>Médecine interne</td>
+              <td>Orthopédie</td>
+          </tr>
+            <!-- Ajoutez d'autres lignes pour les spécialités ici -->
+        </tbody>
+        <thead>
+          <tr>
+              <th>Anesthésiologie</th>
+              <th>Oncologie</th>
+          </tr>
+          <tr>
+            <th>Endocrinologie
+              (ORL)
+            </th>
+            <th>Médecine générale
+            </th>
+        </tr>
+        <tr>
+          <th>Néphrologie</th>
+          <th>Urologie</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Gastro-entérologie</td>
+            <td>Médecine physique et réadaptation</td>
+        </tr>
+       
+        <tr>
+          <td>Médecine interne</td>
+          <td>Orthopédie</td>
+      </tr>
+        <!-- Ajoutez d'autres lignes pour les spécialités ici -->
+    </tbody>
+    </table>
+</body>
+</html>
  {% endblock content %}
