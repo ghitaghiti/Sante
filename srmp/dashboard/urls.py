@@ -3,7 +3,20 @@ from . import views
 
 urlpatterns = [
     path('dashboard/', views.dashboardindex, name='dashboard'),    
-    path('signin/', views.signin, name='signin'),       
-    path('signup/', views.signup, name='signup'),  
-   
+    path('login/', views.login_user, name='login'),
+	path('logout/', views.logout_user, name='logout'),
+	path('register/', views.register_user, name='register'),
+	path('buttons/', views.buttons, name='buttons'),
+	path('forms/', views.forms, name='forms'),
+	path('modals/', views.modals, name='modals'),
+	path('notifications/', views.notifications, name='notifications'),
+	path('typography/', views.typography, name='typography'),
+	path('404/', views.erorrfour, name='404'),
+	path('bootstraptable/', views.bootstraptable, name='bootstrap-table'),
+	path('settings/', views.settings, name='settings'),
+	path('transactions/', views.register_user, name='transactions'),
+	path('forgotpassword/', views.forgotpassword, name='forgot-password'),
+	path('reset-password/', views.resetpassword, name='reset-password'),
+	path('lock/', views.lock, name='lock'),
+	path('500/', views.erorrfive, name='500'),
 ]

@@ -14,18 +14,6 @@ def docteurs(request):
     return render(request, 'medecins/docteurs.html',doc)
 
 
-# def signin(request):
-#     if request.method == 'POST':
-#         # Process the valid form data
-#         fullname = request.POST.get('fullname')
-#         email = request.POST.get('email')
-#         password1 = request.POST.get('password1')
-#         password2 = request.POST.get('password2')
-#         user = DocteurSignUp(fullname=fullname, email=email, password1=password1, password2=password2)
-#         user.save()
-
-#         return redirect('home')
-#     return render(request, "pages/signup.html")
 
 def adddoct(request):
     if request.method == 'POST':

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base1.html' %}
 {% load static %}
 {% block content %}
 
@@ -18,8 +18,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
-<br/><br/><br/><br/>
-
 <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -29,7 +27,7 @@
         </div>
         <div class="d-block">
           <h2 class="h5 mb-3">Hi, Ghita</h2>
-          <a href=="{% url 'signin' %}" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+          <a href=="{% url 'login' %}" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
             Sign Out
           </a>
@@ -37,44 +35,32 @@
       </div>
       <div class="collapse-close d-md-none">
         <a href="#" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
-            aria-label="Toggle navigation">
-            <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </a>
-      </div>
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+        aria-label="Toggle navigation">
+        <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </a>
     </div>
-    <ul class="nav flex-column pt-3 pt-md-0">
-      <li class="nav-item">
-        <a href="{% url 'home' %}" class="nav-link d-flex align-items-center">
-          <span class="sidebar-icon">
-            <img src="{% static 'dashboard/img/brand/light.svg' %}" height="20" width="20" alt="Volt Logo">
-          </span>
-          <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
-        </a>
-      </li>
-      <li class="nav-item  active ">
-        <a href="dashboard/dashboard.html" class="nav-link">
-          <span class="sidebar-icon">
-            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-          </span> 
-          <span class="sidebar-text">Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="https://demo.themesberg.com/volt-pro/pages/kanban.html" target="_blank" class="nav-link d-flex justify-content-between">
-          <span>
-            <span class="sidebar-icon">
-              <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-            </span>
-            <span class="sidebar-text">Kanban</span>
-          </span>
-          <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-          </span>
-        </a>
-      </li>
+  </div>
+  <ul class="nav flex-column pt-3 pt-md-0">
+    <li class="nav-item">
+      <a href="{% url 'home' %}" class="nav-link d-flex align-items-center">
+        <span class="sidebar-icon">
+          <img src="{% static 'dashboard/img/brand/light.svg' %}" height="20" width="20" alt="Volt Logo">
+        </span>
+        
+        <span class="mt-1 ms-1 sidebar-text">S.R.M.P</span>
+      </a>
+    </li>
+    <li class="nav-item  active ">
+      <a {%  url 'dashboard' %} class="nav-link">
+        <span class="sidebar-icon">
+          <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+        </span> 
+        <span class="sidebar-text">Dashboard</span>
+      </a>
+    </li>
       <li class="nav-item ">
-        <a href="{% templates'dashboard/transactions.html '%}" class="nav-link">
+        <a href="{% static 'dashboard/transactions.html' %}" class="nav-link">
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
           </span>
@@ -82,37 +68,11 @@
         </a>
       </li>
       <li class="nav-item ">
-        <a href="{% templates 'dashboard/settings.html ' %}" class="nav-link">
+        <a href="{% url 'settings' %}" class="nav-link">
           <span class="sidebar-icon">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
           </span>
           <span class="sidebar-text">Settings</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="https://demo.themesberg.com/volt-pro/pages/calendar.html" target="_blank" class="nav-link d-flex justify-content-between">
-          <span>
-            <span class="sidebar-icon">
-              <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"></path></svg>
-            </span>
-            <span class="sidebar-text">Calendar</span>
-          </span>
-          <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-          </span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="https://demo.themesberg.com/volt-pro/pages/map.html" target="_blank" class="nav-link d-flex justify-content-between">
-          <span>
-            <span class="sidebar-icon">
-              <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
-            </span>
-            <span class="sidebar-text">Map</span>
-          </span>
-          <span>
-            <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-          </span>
         </a>
       </li>
       <li class="nav-item">
@@ -133,7 +93,7 @@
           role="list" id="submenu-app" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item ">
-              <a class="nav-link" href="{% templates ' dashboardtables/bootstrap-tables.html '%}">
+              <a class="nav-link" href="{% static 'dashboard/tables/bootstrap-tables.html '%}">
                 <span class="sidebar-text">Bootstrap Tables</span>
               </a>
             </li>
@@ -158,37 +118,37 @@
           id="submenu-pages" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'signin' %}">
+              <a class="nav-link" href="{% url 'login' %}">
                 <span class="sidebar-text">Sign In</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'signup' %}">
+              <a class="nav-link" href="{% url 'register' %}">
                 <span class="sidebar-text">Sign Up</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/examples/forgot-password.html">
+              <a class="nav-link" {% url 'forgot-password' %}">
                 <span class="sidebar-text">Forgot password</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/examples/reset-password.html">
+              <a class="nav-link" {% url 'reset-password' %}">
                 <span class="sidebar-text">Reset password</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/examples/lock.html">
+              <a class="nav-link" href=" {% url 'lock' %}">
                 <span class="sidebar-text">Lock</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/examples/404.html">
+              <a class="nav-link" {% url '404'%}">
                 <span class="sidebar-text">404 Not Found</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/examples/500.html">
+              <a class="nav-link" {% url '500' %}">
                 <span class="sidebar-text">500 Not Found</span>
               </a>
             </li>
@@ -219,27 +179,27 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../../pages/components/buttons.html">
+              <a class="nav-link" {% url 'buttons' %}">
                 <span class="sidebar-text">Buttons</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../../pages/components/notifications.html">
+              <a class="nav-link" {% url 'notifications' %}">
                 <span class="sidebar-text">Notifications</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../../pages/components/forms.html">
+              <a class="nav-link" href=" {% url 'forms' %}">
                 <span class="sidebar-text">Forms</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../../pages/components/modals.html">
+              <a class="nav-link" href="{% url 'modals' %}">
                 <span class="sidebar-text">Modals</span>
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="../../pages/components/typography.html">
+              <a class="nav-link" href=" {% url 'typography' %}">
                 <span class="sidebar-text">Typography</span>
               </a>
             </li>
@@ -256,16 +216,9 @@
           <span class="sidebar-text">Documentation <span class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.4</span></span>
         </a>
       </li>
+      
       <li class="nav-item">
-        <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
-          <span class="sidebar-icon">
-            <img src="{% static 'dashboard/img/themesberg.svg' %}" height="20" width="28" alt="Themesberg Logo">
-          </span>
-          <span class="sidebar-text">Themesberg</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="../../pages/upgrade-to-pro.html"
+        <a href="{% url 'dashboard' %}"
           class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
           <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
@@ -283,6 +236,7 @@
     <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
       <div class="d-flex align-items-center">
         <!-- Search form -->
+        <a href="{% url 'home' %}" class="logo me-auto" style="max-height: 10rem;"><img src="{% static 'images/logo.png' %}" alt="" class="img-fluid" style="width: 7rem;"></a>
         <form class="navbar-search form-inline" id="navbar-search-main">
           <div class="input-group input-group-merge search-bar">
               <span class="input-group-text" id="topbar-addon">
@@ -475,123 +429,7 @@
         </div>
     </div>
 </div>
-<div class="row">
-    
-  
-  
-        <div class="card bg-yellow-100 border-0 shadow">
-            <div class="card-header d-sm-flex flex-row align-items-center flex-0">
-                <div class="d-block mb-3 mb-sm-0">
-                    <div class="fs-5 fw-normal mb-2">Sales Value</div>
-                    <h2 class="fs-3 fw-extrabold">$10,567</h2>
-                    <div class="small mt-2"> 
-                        <span class="fw-normal me-2">Yesterday</span>                              
-                        <span class="fas fa-angle-up text-success"></span>                                   
-                        <span class="text-success fw-bold">10.57%</span>
-                    </div>
-                </div>
-                <div class="d-flex ms-auto">
-                    <a href="#" class="btn btn-secondary text-dark btn-sm me-2">Month</a>
-                    <a href="#" class="btn btn-dark btn-sm me-3">Week</a>
-                </div>
-            </div>
-            <div class="card-body p-2">
-                <div class="ct-chart-sales-value ct-double-octave ct-series-g"></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-4 mb-4">
-        <div class="card border-0 shadow">
-            <div class="card-body">
-                <div class="row d-block d-xl-flex align-items-center">
-                    <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
-                        <div class="icon-shape icon-shape-primary rounded me-4 me-sm-0">
-                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
-                        </div>
-                        <div class="d-sm-none">
-                            <h2 class="h5">Customers</h2>
-                            <h3 class="fw-extrabold mb-1">345,678</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-7 px-xl-0">
-                        <div class="d-none d-sm-block">
-                            <h2 class="h6 text-gray-400 mb-0">Customers</h2>
-                            <h3 class="fw-extrabold mb-2">345k</h3>
-                        </div>
-                        <small class="d-flex align-items-center text-gray-500">
-                            Feb 1 - Apr 1,  
-                            <svg class="icon icon-xxs text-gray-500 ms-2 me-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg>
-                            USA
-                        </small> 
-                        <div class="small d-flex mt-1">                               
-                            <div>Since last month <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg><span class="text-success fw-bolder">22%</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-4 mb-4">
-        <div class="card border-0 shadow">
-            <div class="card-body">
-                <div class="row d-block d-xl-flex align-items-center">
-                    <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
-                        <div class="icon-shape icon-shape-secondary rounded me-4 me-sm-0">
-                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="d-sm-none">
-                            <h2 class="fw-extrabold h5">Revenue</h2>
-                            <h3 class="mb-1">$43,594</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-7 px-xl-0">
-                        <div class="d-none d-sm-block">
-                            <h2 class="h6 text-gray-400 mb-0">Revenue</h2>
-                            <h3 class="fw-extrabold mb-2">$43,594</h3>
-                        </div>
-                        <small class="d-flex align-items-center text-gray-500">
-                            Feb 1 - Apr 1,  
-                            <svg class="icon icon-xxs text-gray-500 ms-2 me-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg>
-                            GER
-                        </small> 
-                        <div class="small d-flex mt-1">                               
-                            <div>Since last month <svg class="icon icon-xs text-danger" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg><span class="text-danger fw-bolder">2%</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-4 mb-4">
-        <div class="card border-0 shadow">
-            <div class="card-body">
-                <div class="row d-block d-xl-flex align-items-center">
-                    <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
-                        <div class="icon-shape icon-shape-tertiary rounded me-4 me-sm-0">
-                            <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="d-sm-none">
-                            <h2 class="fw-extrabold h5"> Bounce Rate</h2>
-                            <h3 class="mb-1">50.88%</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-7 px-xl-0">
-                        <div class="d-none d-sm-block">
-                            <h2 class="h6 text-gray-400 mb-0"> Bounce Rate</h2>
-                            <h3 class="fw-extrabold mb-2">50.88%</h3>
-                        </div>
-                        <small class="text-gray-500">
-                            Feb 1 - Apr 1
-                        </small> 
-                        <div class="small d-flex mt-1">                               
-                            <div>Since last month <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg><span class="text-success fw-bolder">4%</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="row">
     <div class="col-12 col-xl-8">
         <div class="row">
