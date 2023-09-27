@@ -43,11 +43,11 @@
             <div class="col-12 d-flex align-items-center justify-content-center">
                 <div class="bg-white shadow border-1 rounded border-light p-4 p-lg-5 w-100 fmxw-500"><br><br>
                     <div class="text-center text-md-center mb-4 mt-md-0"><br><br>
-                        <h1 class="mb-0 h3">Create Account </h1>
+                        <h1 class="mb-0 h3">Créer un compte</h1>
                         <div class="d-flex justify-content-center align-items-center mt-0"><br>
                             <span class="fw-normal">
-                                Already have an account? 
-                                <a href="{% url 'login' %}" class="fw-bold" style="color: blue;">Login here</a>
+                                Vous avez déjà un compte?
+                                <a href="{% url 'login' %}" class="fw-bold" style="color: blue;">Connectez-vous ici</a>
                             </span>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                             {% csrf_token %}
                             {% if form.errors %}
                                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                        Your Form Has Errors
+                                        Votre formulaire contient des erreurs
                                     {% for field in form %}
                                         {% if field.errors %}
                                             {{ field.errors }}
@@ -74,7 +74,7 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" value="" id="remember">
                                             <label class="form-check-label fw-normal mb-0" for="remember">
-                                                I agree to the <a href="#" class="fw-bold">terms and conditions</a>
+                                                je suis d'accord avec  <a href="#" class="fw-bold">termes et conditions</a>
                                             </label>
                                         </div>
                                     </div>

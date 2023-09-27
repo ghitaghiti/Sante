@@ -43,7 +43,6 @@ def recommend_doctors(request):
             engine='text-davinci-003',
             prompt=prompt,
             temperature=0.7,
-            # n=5,
             stop=None,
             max_tokens=500,
         )

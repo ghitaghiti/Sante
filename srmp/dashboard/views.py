@@ -90,7 +90,7 @@ def transactions(request):
 
 def forgotpassword(request):
 	context= {}
-	return render(request, 'dashboard/dashboard/forgot-password.html', context)
+	return render(request, 'dashboard/dashboard/forgotpassword.html', context)
 
 def resetpassword(request):
 	context= {}
