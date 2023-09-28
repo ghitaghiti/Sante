@@ -14,7 +14,7 @@
         <div class="form-floating">
           <label for="symptoms"> </label>
           <select name="symptoms" class="form-select" id="floatingSelect" aria-label="Floating label select example" style="width: 300px; margin-left: 10px; border-radius: 50px; padding: 10px 35px;" required>
-            <option value="" selected disabled>Symptômes...</option>
+            <option value="" selected disabled>Les spécialités</option>
             {% for symptoms in maladie %}
               <option value="{{ symptoms.names }}"> {{ symptoms.names }} </option>
             {% endfor %}
