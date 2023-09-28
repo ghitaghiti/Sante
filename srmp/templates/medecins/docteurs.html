@@ -65,8 +65,10 @@
           <div class="col-lg-6 mt-4">
               <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="max-height: 90%;"><br><br>
                 <a href="#">
+                   {% if item.image %}
                     <img class="rounded-t-lg"  src="{{ item.image.url }}" alt="doctors" style="max-width: 400px; max-height: 300px;"/>
-                </a>
+                    {% endif %}
+                 </a>
                 <div class="p-5">
                   
                   <h4 class="mb-2" style="color: #007bff">{{item.fullname}}</h4>

@@ -5,6 +5,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from .forms import SignUpForm
+from medecins.models import Docteurs
+
+
 
 def dashboardindex(request):
     context= {}
@@ -81,8 +84,19 @@ def bootstraptable(request):
 	return render(request, 'dashboard/tables/bootstrap-tables.html', context)
 
 def settings(request):
-	context= {}
-	return render(request, 'dashboard/settings.html', context)
+	if request.method == 'POST':
+        # Process the valid form data
+		image = request.FILES.get('image')
+		fullname = request.POST.get('fullname')
+		sexe = request.POST.get('gender')
+		email = request.POST.get('email')
+		specialite = request.POST.get('speciality')
+		address = request.POST.get('address')
+		phone = request.POST.get('phone')
+		user = Docteurs(image=image, fullname=fullname, sexe=sexe, email=email, specialitesmedicales=specialite, adresse=address, telephone=phone)
+		user.save()
+		return redirect('dashboard')
+	return render(request, "dashboard/settings.html")
 
 def transactions(request):
 	context= {}

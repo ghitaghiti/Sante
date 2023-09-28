@@ -38,7 +38,7 @@ def recommend_doctors(request):
         # Appel à OpenAI pour générer la recommandation des médecins
         openai.api_key = ''
         prompt = f"Recommander des médecins à {city} spécialisés en {specialty},\
-                    et donnez leurs adresse ,spécialisés,disponibilités,et telephone si c'est possible."
+                    et donnez leurs adresse et telephone si c'est possible."
         response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -49,7 +49,7 @@ def recommend_doctors(request):
         )
 
         choices_text = response['choices'][0]['text']
-        doctors = choices_text[2:].split("\n")
+        doctors = choices_text[2:-2].split("\n")
 
         return render(request, 'pages/recommend_doctors.html', {'doctors': doctors})
 
